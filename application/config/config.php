@@ -29,7 +29,7 @@ date_default_timezone_set(getenv('APP_TIMEZONE'));
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = getenv('APP_URL');
 
 /*
 |--------------------------------------------------------------------------
