@@ -11,6 +11,9 @@ class Home extends CI_Controller
     //  Index Page
     public function index()
     {
+        // Use notif
+        notif('success','Welcome to kubicode', 'This is the message');
+        
         // Data for send to view
         $data['title'] = 'Home | Kubi Code';
 

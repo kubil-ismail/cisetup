@@ -13,7 +13,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="<?= asset_url() . 'img/favicon.png' ?>" type="image/x-icon">
-    <link rel="stylesheet" href="<?= asset_url() . 'css/bootstrap.min.css' ?>" >
+    <link rel="stylesheet" href="<?= asset_url() . 'css/bootstrap.min.css' ?>">
 
     <!-- Get title from controller -->
     <title><?= $title ?></title>
