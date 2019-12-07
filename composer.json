@@ -1,6 +1,6 @@
 {
-	"description": "Kubicode setup ci4",
-	"name": "ci4",
+	"description": "CodeIgniter 3 setup",
+	"name": "kubi/cisetup",
 	"type": "project",
 	"license": "MIT",
 	"support": {
