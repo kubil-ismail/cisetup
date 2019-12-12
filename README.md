@@ -57,6 +57,7 @@ Please make sure to update tests as appropriate.
 * [Codeigniter](https://github.com/bcit-ci/CodeIgniter)
 * [Bootstrap 4](https://github.com/twbs/bootstrap)
 * [Sweet Alert 2](https://github.com/sweetalert2/sweetalert2)
+* [Freepik](https://image.freepik.com/free-vector/error-404-concept-landing-page_23-2148249256.jpg)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
