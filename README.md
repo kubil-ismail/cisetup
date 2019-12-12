@@ -4,7 +4,7 @@
 
 ![](https://img.shields.io/github/stars/kubi-codes/cisetup) ![](https://img.shields.io/github/forks/kubi-codes/cisetup) ![](https://img.shields.io/github/tag/kubi-codes/cisetup) ![](https://img.shields.io/github/release/kubi-codes/cisetup) ![](https://img.shields.io/github/issues/pandaokubi-codes/cisetup)
 
-Is a codeigniter 3 framework that has been modified and added new features such as dotenv, sweet alert 2 & bootstrap 4
+Is a codeigniter 3 framework that has been modified and added new features such as dotenv, sweet alert 2 & bootstrap 4, etc.
 
 ## Installation
 
@@ -13,6 +13,18 @@ Use the composer to install cisetup.
 ```bash
 composer create-project kubi/cisetup
 ```
+set your dotenv file in .env
+```dotenv
+APP_URL=http://localhost/Kubi_codes/cisetup/
+APP_TIMEZONE=Asia/Jakarta
+
+DB_HOST=localhost
+DB_USERNAME=root
+DB_PASSWORD=
+DB_DATABASE=
+DB_DRIVER=mysqli
+```
+
 ## Some additional features
 
 #### XSS Echo Filter
