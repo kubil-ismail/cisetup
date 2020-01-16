@@ -9,11 +9,7 @@ if (!function_exists('request()')) {
     function request_get($url)
     {
         $CI = &get_instance();
-        $CI->load->library('session');
-        $token = $CI->session->token;
-
         $headers = array('Accept' => 'application/json');
-        $url .= '?api_token='.$token;
 
         $response = Unirest\Request::get($url,$headers);
         return $response->body;
@@ -22,11 +18,8 @@ if (!function_exists('request()')) {
     function request_post($url, $query= null)
     {
         $CI = &get_instance();
-        $CI->load->library('session');
-        $token = $CI->session->token;
         
         $headers = array('Accept' => 'application/json');
-        $url .= '?api_token=' . $token;
 
         $response = Unirest\Request::post($url, $headers, $query);
         if ($response->code == 200) {
@@ -47,10 +40,8 @@ if (!function_exists('request()')) {
     {
         $CI = &get_instance();
         $CI->load->library('session');
-        $token = $CI->session->token;
         
         $headers = array('Accept' => 'application/json');
-        $url .= '?api_token=' . $token;
 
         $response = Unirest\Request::delete($url, $headers, $query);
 
@@ -73,12 +64,8 @@ if (!function_exists('request()')) {
     {
         $CI = &get_instance();
         $CI->load->library('session');
-        $token = $CI->session->token;
         
         $headers = array('Accept' => 'application/json');
-        $url .= '&api_token=' . $token;
-
-        var_dump($url);
 
         $response = Unirest\Request::PUT($url, $headers, $query);
 
@@ -100,7 +87,6 @@ if (!function_exists('request()')) {
     function request_auth($url, $query = null)
     {
         $headers = array('Accept' => 'application/json');
-        // $url .= '?api_token=' . $token;
 
         $response = Unirest\Request::post($url, $headers, $query);
         
