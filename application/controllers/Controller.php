@@ -8,6 +8,15 @@ class Controller extends CI_Controller
      *
      */
 
+    var $API = "";
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->API = getenv('APP_REST_URL');
+    }
+
     //  Index Page
     public function index()
     {
@@ -16,7 +25,7 @@ class Controller extends CI_Controller
         
         // Data for send to view
         $data['title'] = 'Home | Kubi Code';
-
+        
         // Load view
         $this->load->view('layouts/header',$data);
         $this->load->view('home/index');
