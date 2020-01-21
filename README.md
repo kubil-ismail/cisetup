@@ -101,6 +101,54 @@ example
  notif('success','Login Success', 'Welcome to app','home/user');    
 ```
 
+
+#### Use Unirest
+
+HTTP Request GET
+
+```php
+ request_get($url);    
+```
+
+HTTP Request POST
+
+```php
+ request_post($url, $query);
+```
+
+HTTP Request PUT
+
+```php
+ request_put($url, $query);
+```
+
+HTTP Request DELETE
+
+```php
+ request_delete($url);
+```
+
+example 
+
+in your controller
+```php
+public function index()
+{
+ // Use notif
+ notif('success','Welcome to kubicode', 'This is the message from Home/index');
+
+ // Data for send to view
+ $data['title'] = 'Home | Kubi Code';
+ $data['response'] = request_get('https://jsonplaceholder.typicode.com/todos');
+
+ // Load view
+ $this->load->view('layouts/header',$data);
+ $this->load->view('home/index');
+ $this->load->view('layouts/footer');
+}
+```
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
