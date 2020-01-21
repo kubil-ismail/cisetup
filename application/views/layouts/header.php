@@ -16,11 +16,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="<?= asset_url() . 'img/favicon.png' ?>" type="image/x-icon">
-    <link rel="stylesheet" href="<?= asset_url() . 'css/bootstrap.min.css' ?>">
+    <link rel="stylesheet" href="<?= asset_url() . 'vendor/bootstrap/css/bootstrap.min.css' ?>">
     <link rel="stylesheet" href="<?= asset_url() . 'css/animate.min.css' ?>">
 
     <!-- Jquery JS -->
-    <script src="<?= asset_url() . 'js/jquery-3.4.1.min.js' ?>"></script>
+    <script src="<?= asset_url() . 'vendor/jquery/js/jquery-3.4.1.min.js' ?>"></script>
 
     <!-- Get title from controller -->
     <title><?= $title ?></title>
