@@ -46,6 +46,48 @@ APP_TIMEZONE=Asia/Jakarta
 getenv('APP_TIMEZONE');
 ```
 
+#### Use DataTables
+
+add this code above the ```html <head>``` 
+
+```php
+ <?php table_url(); ?>   
+```
+after that create a table using the ```html <table>``` tag and add the id to the table tag
+	
+```html
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Position</th>
+			<th>Office</th>
+			<th>Age</th>
+			<th>Start date</th>
+			<th>Salary</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Tiger Nixon</td>
+			<td>System Architect</td>
+			<td>Edinburgh</td>
+			<td>61</td>
+			<td>2011/04/25</td>
+			<td>$320,800</td>
+		</tr>
+	<tbody>
+</table>
+```
+
+at the end add a script to call the data tables
+
+```javascript
+$(document).ready(function() {
+	$('#dataTable').DataTable();
+});
+```
+
 #### Use Sweet Alert
 
 ```php
@@ -71,6 +113,9 @@ Please make sure to update tests as appropriate.
 * [Sweet Alert 2](https://github.com/sweetalert2/sweetalert2)
 * [Freepik](https://image.freepik.com/free-vector/error-404-concept-landing-page_23-2148249256.jpg)
 * [Animate CSS](https://daneden.github.io/animate.css/)
+* [Unirest](http://unirest.io/php.html)
+* [Datatables](https://datatables.net/)
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
