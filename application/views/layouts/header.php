@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?= asset_url() . 'css/animate.min.css' ?>">
 
     <!-- Jquery JS -->
-    <script src="<?= asset_url() . 'vendor/jquery/js/jquery-3.4.1.min.js' ?>"></script>
+    <script src="<?= asset_url() . 'vendor/jquery/jquery-3.4.1.min.js' ?>"></script>
 
     <!-- Get title from controller -->
     <title><?= $title ?></title>
