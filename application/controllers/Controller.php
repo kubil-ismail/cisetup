@@ -17,6 +17,7 @@ class Controller extends CI_Controller
         $this->API = getenv('APP_REST_URL');
     }
 
+
     //  Index Page
     public function index()
     {
@@ -32,9 +33,22 @@ class Controller extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
+    // Display Table
+    public function table()
+    {
+        // Data for send to view
+        $data['title'] = 'Table | Kubi Code';
+
+        // Load view
+        $this->load->view('layouts/header', $data);
+        $this->load->view('home/tables');
+        $this->load->view('layouts/footer');
+    }
+
     // 404 Not Found
     public function page_not_found()
     {
         $this->load->view('errors/404');
     }
+    
 }

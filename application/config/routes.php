@@ -8,6 +8,7 @@ $route['default_controller'] = 'controller';
 $route['assets/(:any)'] = 'assets/$1';
 $route['404_override'] = 'controller/page_not_found';
 $route['translate_uri_dashes'] = TRUE;
+$route['table'] = 'controller/table';
 
 /*
     CUTOM URL

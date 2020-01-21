@@ -18,7 +18,6 @@ if (!function_exists('request()')) {
     function request_post($url, $query= null)
     {
         $CI = &get_instance();
-        
         $headers = array('Accept' => 'application/json');
 
         $response = Unirest\Request::post($url, $headers, $query);
