@@ -13,6 +13,12 @@ Use the composer to install cisetup.
 ```bash
 composer create-project kubi/cisetup
 ```
+Update dependency.
+
+```bash
+composer install
+```
+
 set your dotenv file in .env
 ```dotenv
 APP_URL=http://localhost/Kubi_codes/cisetup/
@@ -53,39 +59,24 @@ add this code above the ```html <head>```
 ```php
  <?php table_url(); ?>   
 ```
-after that create a table using the ```html <table>``` tag and add the id to the table tag
-	
-```html
-<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Position</th>
-			<th>Office</th>
-			<th>Age</th>
-			<th>Start date</th>
-			<th>Salary</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Tiger Nixon</td>
-			<td>System Architect</td>
-			<td>Edinburgh</td>
-			<td>61</td>
-			<td>2011/04/25</td>
-			<td>$320,800</td>
-		</tr>
-	<tbody>
-</table>
+after that create a table using table functions 
+
+```php 
+table($table_title, $table_key, $table_data)
+``` 
+example:
+**In Controller**
+```php
+$data['table_title'] = 'data_table';
+$data['table_key'] = ['ID', 'Category Name', 'Product Name', 'Cashier Name'];
+$data['table_data'] = $this->db->get('product')->result_array();
 ```
 
-at the end add a script to call the data tables
-
-```javascript
-$(document).ready(function() {
-	$('#dataTable').DataTable();
-});
+**In Views**
+```html
+<?php
+	table($table_title, $table_key, $table_data);
+?>
 ```
 
 #### Use Sweet Alert
