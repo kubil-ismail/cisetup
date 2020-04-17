@@ -8,13 +8,13 @@ class Controller extends CI_Controller
      *
      */
 
-    var $API = "";
+    // var $API = "";
 
     public function __construct()
     {
         parent::__construct();
 
-        $this->API = getenv('APP_REST_URL');
+        // $this->API = getenv('APP_REST_URL');
     }
 
 
@@ -22,13 +22,13 @@ class Controller extends CI_Controller
     public function index()
     {
         // Use notif
-        notif('success','Welcome to kubicode', 'This is the message from Home/index');
-        
+        notif('success', 'Welcome to kubicode', 'This is the message from Home/index');
+
         // Data for send to view
         $data['title'] = 'Home | Kubi Code';
-        
+
         // Load view
-        $this->load->view('layouts/header',$data);
+        $this->load->view('layouts/header', $data);
         $this->load->view('home/index');
         $this->load->view('layouts/footer');
     }
@@ -38,6 +38,11 @@ class Controller extends CI_Controller
     {
         // Data for send to view
         $data['title'] = 'Table | Kubi Code';
+
+        // Use table function
+        $data['table_title'] = 'data_table';
+        $data['table_key'] = ['ID', 'Category Name', 'Product Name', 'Cashier Name'];
+        $data['table_data'] = $this->db->get('product')->result_array();
 
         // Load view
         $this->load->view('layouts/header', $data);
@@ -50,5 +55,4 @@ class Controller extends CI_Controller
     {
         $this->load->view('errors/404');
     }
-    
 }
